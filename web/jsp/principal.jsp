@@ -21,9 +21,14 @@
     <h1 style=" text-align: center">Bienvenido al Sistema de Gestión de Cursos de Extensión</h1>
        <br/><br/>
        
-         <%
-            if(request.getParameter("error")!=null)
-                out.println(request.getParameter("error"));
+        <%
+         HttpSession sesionOk = request.getSession();
+         
+         if (sesionOk.getAttribute("usuario") == null) {
+            response.sendRedirect("../index.jsp?error=no ha iniciado sesion");
+        } else {
+        
+        }
          %>
        
        <form action="login.jsp" >

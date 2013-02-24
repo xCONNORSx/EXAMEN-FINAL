@@ -4,6 +4,8 @@
  */
 package facade;
 
+import negocio.Persona;
+
 /**
  *
  * @author CONNORS
@@ -19,6 +21,9 @@ public class SIAExtension {
         return false;
     }
     
-    public 
+    public String insertarEstudiante(long codigo, String nombre, String email, String contraseña){
     
+        return Persona.insertarEstudiante()
+    }
+
 }
